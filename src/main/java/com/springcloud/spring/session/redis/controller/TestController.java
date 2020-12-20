@@ -16,6 +16,12 @@ public class TestController {
 
     @GetMapping("/get")
     public String getSession(HttpSession session){
+        System.out.println(123);
         return (String)session.getAttribute("msg");
+    }
+
+    @GetMapping("/find")
+    public String findSession(){
+        return "find";
     }
 }
